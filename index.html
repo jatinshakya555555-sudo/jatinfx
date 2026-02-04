@@ -8,7 +8,8 @@
 <title>JATINfx</title>
 
 <style>
-body {
+
+/* ===== BACKGROUND IMAGE ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -17,21 +18,19 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative;
-  z-index: 1;
 }
-  /* DARK OVERLAY */
+
+/* ===== DARK OVERLAY (DIM BACKGROUND) ===== */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.65); /* opacity control */
+  inset: 0;
+  background: rgba(0,0,0,0.55); /* change 0.45–0.65 if needed */
   z-index: -1;
+  pointer-events: none;
 }
 
+/* ===== WEBSITE TITLE ===== */
 h1 {
   text-align: center;
   padding-top: 60px;
@@ -41,11 +40,12 @@ h1 {
   font-weight: 600;
 }
 
+/* ===== CATEGORY SECTION ===== */
 .category {
   padding: 20px;
 }
 
-/* CLEAN AMV TEXT (no box no line) */
+/* ===== AMV FRAME + SIDE LINES ===== */
 .category h2 {
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -82,6 +82,7 @@ h1 {
   background: white;
 }
 
+/* ===== VIDEO GRID ===== */
 .videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -89,7 +90,7 @@ h1 {
   margin-top: 20px;
 }
 
-/* RESPONSIVE YOUTUBE VIDEO */
+/* ===== RESPONSIVE YOUTUBE VIDEO ===== */
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -106,6 +107,7 @@ h1 {
   border-radius: 8px;
   border: none;
 }
+
 </style>
 </head>
 
@@ -115,6 +117,7 @@ h1 {
 
 <div class="category">
   <h2>AMV</h2>
+
   <div class="videos">
 
     <div class="video-wrapper">
@@ -130,5 +133,3 @@ h1 {
 
 </body>
 </html>
-
-
