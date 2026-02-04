@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Video Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Video Website</title>
 
-    h1 {
-      text-align: center;
-      padding: 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
 
-    .category {
-      padding: 20px;
-    }
+h1 {
+  text-align: center;
+  padding: 20px;
+}
 
-    .category h2 {
-      border-left: 4px solid red;
-      padding-left: 10px;
-      margin-bottom: 15px;
-    }
+.category {
+  padding: 20px;
+}
 
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-    }
+.category h2 {
+  border-left: 4px solid red;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
 
-    iframe {
-      width: 100%;
-      height: 200px;
-      border-radius: 8px;
-      border: none;
-    }
-  </style>
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+/* RESPONSIVE YOUTUBE VIDEO */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+}
+</style>
 </head>
+
 <body>
 
 <h1>My Video Website</h1>
@@ -47,7 +61,11 @@
 <div class="category">
   <h2>Featured Video</h2>
   <div class="videos">
-    <iframe src="https://www.youtube.com/embed/OWfS-pP80gw" allowfullscreen></iframe>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/OWfS-pP80gw" allowfullscreen></iframe>
+    </div>
+
   </div>
 </div>
 
