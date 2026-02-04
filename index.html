@@ -9,7 +9,7 @@
 
 <style>
 
-/* ===== BACKGROUND IMAGE ===== */
+/* ===== BACKGROUND ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -20,17 +20,16 @@ body {
   background-attachment: fixed;
 }
 
-/* ===== DARK OVERLAY ===== */
+/* DARK OVERLAY */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.55);
   z-index: -1;
-  pointer-events: none;
 }
 
-/* ===== CENTER CONTENT WIDTH ===== */
+/* ===== CENTER CONTENT ===== */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -48,7 +47,7 @@ h1 {
 
 /* ===== CATEGORY ===== */
 .category {
-  padding: 20px;
+  margin-top: 40px;
 }
 
 /* ===== AMV FRAME ===== */
@@ -66,7 +65,7 @@ h1 {
   border: 2px solid white;
 }
 
-/* LINES */
+/* SIDE LINES */
 .category h2::before,
 .category h2::after {
   content: "";
@@ -83,12 +82,12 @@ h1 {
 /* ===== VIDEO GRID ===== */
 .videos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 45px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-/* ===== RESPONSIVE VIDEO ===== */
+/* ===== VIDEO ===== */
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -99,14 +98,14 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   border: none;
 }
 
-/* ===== CONTACT LINK ===== */
+/* ===== CONTACT ===== */
 .contact-link {
   text-align: center;
-  margin: 60px 0;
+  margin: 80px 0;
   font-family: Poppins;
   letter-spacing: 3px;
 }
@@ -125,10 +124,11 @@ h1 {
 
 <h1>jatinfx</h1>
 
-<div class="category">
-  <h2>AMV</h2>
+<div class="container">
 
-  <div class="container">
+  <div class="category">
+    <h2>AMV</h2>
+
     <div class="videos">
 
       <div class="video-wrapper">
@@ -145,10 +145,11 @@ h1 {
 
     </div>
   </div>
-</div>
 
-<div class="contact-link">
-  <a href="contact.html">CONTACT</a>
+  <div class="contact-link">
+    <a href="contact.html">CONTACT</a>
+  </div>
+
 </div>
 
 </body>
