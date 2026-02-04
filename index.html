@@ -37,8 +37,35 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
   letter-spacing: 6px;
-  margin-bottom: 35px;
   color: white;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 25px;
+  border: 3px solid white;
+}
+
+/* LEFT LINE */
+.category h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -150px;
+  width: 150px;
+  height: 3px;
+  background: white;
+}
+
+/* RIGHT LINE */
+.category h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -150px;
+  width: 150px;
+  height: 3px;
+  background: white;
 }
 
 .videos {
@@ -89,3 +116,4 @@ h1 {
 
 </body>
 </html>
+
