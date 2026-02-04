@@ -26,9 +26,19 @@ h1 {
 }
 
 .category h2 {
-  border-left: 4px solid red;
-  padding-left: 10px;
-  margin-bottom: 15px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  position: relative;
+} 
+  .category h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: red;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
 .videos {
@@ -81,6 +91,7 @@ h1 {
 
 </body>
 </html>
+
 
 
 
