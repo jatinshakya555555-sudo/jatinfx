@@ -29,7 +29,43 @@ body::before {
   z-index: -1;
 }
 
-/* CENTER WIDTH */
+/* ===== HAMBURGER MENU ===== */
+.menu-icon {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+  padding-top: 120px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: Poppins;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+.menu.active { right: 0; }
+
+/* ===== CENTER WIDTH ===== */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -113,24 +149,20 @@ h1 {
 .RED { color:#ff3b3b; text-shadow:0 0 12px #ff3b3b; }
 .PURPLE { color:#a855f7; text-shadow:0 0 12px #a855f7; }
 
-/* CONTACT */
-.contact-link {
-  text-align:center;
-  margin:80px 0;
-  font-family:Poppins;
-  letter-spacing:3px;
-}
-.contact-link a {
-  color:white;
-  text-decoration:none;
-  border-bottom:1px solid white;
-  padding-bottom:5px;
-}
-
 </style>
 </head>
 
 <body>
+
+<!-- MENU ICON -->
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<!-- SIDE MENU -->
+<div class="menu" id="menu">
+  <a href="index.html">AMV</a>
+  <a href="gaming.html">GAMING</a>
+  <a href="contact.html">CONTACT</a>
+</div>
 
 <h1>jatinfx</h1>
 
@@ -140,7 +172,6 @@ h1 {
 
     <div class="videos">
 
-      <!-- VIDEO 1 -->
       <div>
         <div class="video-title BLUE">STEVE HARRINGTON</div>
         <div class="video-wrapper">
@@ -148,7 +179,6 @@ h1 {
         </div>
       </div>
 
-      <!-- VIDEO 2 -->
       <div>
         <div class="video-title RED">GOJO VS HOMELANDER</div>
         <div class="video-wrapper">
@@ -156,7 +186,6 @@ h1 {
         </div>
       </div>
 
-      <!-- VIDEO 3 -->
       <div>
         <div class="video-title PURPLE">EKAKI EDIT</div>
         <div class="video-wrapper">
@@ -166,11 +195,13 @@ h1 {
 
     </div>
   </div>
-
-  <div class="contact-link">
-    <a href="contact.html">CONTACT</a>
-  </div>
 </div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
