@@ -70,6 +70,7 @@ body::before {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
+  padding-bottom: 120px;   /* 👈 EXTRA SCROLL SPACE */
 }
 
 /* MAIN TITLE */
@@ -163,7 +164,7 @@ h1 {
   <a href="contact.html">CONTACT</a>
 </div>
 
-<h1>jatinfx</h1>
+<h1>JATINfx</h1>
 
 <div class="container">
   <div class="category">
@@ -179,13 +180,12 @@ h1 {
       </div>
 
       <!-- LOCAL VIDEO -->
-<div>
-  <div class="video-title" style="color:#00ff9c;">Your Name</div>
-
-  <video controls width="100%" style="border-radius:12px;">
-    <source src="Sequence 01 .mp4" type="video/mp4">
-  </video>
-</div>
+      <div>
+        <div class="video-title" style="color:#00ff9c;">Your Name</div>
+        <video controls width="100%" style="border-radius:12px;">
+          <source src="Sequence 01 .mp4" type="video/mp4">
+        </video>
+      </div>
 
       <div>
         <div class="video-title white">GOJO VS HOMELANDER</div>
@@ -205,6 +205,13 @@ h1 {
   </div>
 </div>
 
+<!-- 👇 FOOTER CONTACT -->
+<footer style="text-align:center; padding:40px 0; font-family:Poppins; letter-spacing:3px;">
+  <a href="contact.html" style="color:white; text-decoration:none; border-bottom:1px solid white;">
+    CONTACT
+  </a>
+</footer>
+
 <script>
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
@@ -213,8 +220,3 @@ function toggleMenu(){
 
 </body>
 </html>
-
-
-
-
-
