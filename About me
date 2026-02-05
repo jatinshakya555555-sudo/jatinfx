@@ -3,113 +3,67 @@
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - JATINfx</title>
+<title>About • JATINfx</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Poppins;
   color:white;
   background-image:url("45.jpg");
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
 }
-
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.65);
   z-index:-1;
 }
 
-/* MENU */
-.menu-icon{
-  position:fixed;
-  top:25px;
-  right:25px;
-  font-size:30px;
-  cursor:pointer;
-}
-.menu{
-  position:fixed;
-  top:0;
-  right:-260px;
-  width:260px;
-  height:100%;
-  background:rgba(0,0,0,0.95);
-  backdrop-filter:blur(10px);
-  transition:.4s;
-  padding-top:120px;
-  text-align:center;
-}
-.menu a{
-  display:block;
-  color:white;
-  text-decoration:none;
-  font-family:Poppins;
-  letter-spacing:3px;
-  font-size:20px;
-  margin:25px 0;
-}
-.menu.active{ right:0; }
-
-/* TITLE */
 h1{
   text-align:center;
   padding-top:60px;
-  font-family:'Orbitron';
+  font-family:Orbitron;
   font-size:60px;
   letter-spacing:10px;
 }
 
-/* ABOUT BOX */
 .about{
   max-width:800px;
   margin:80px auto;
   padding:40px;
-  font-family:Poppins;
+  background:rgba(0,0,0,0.6);
+  border-radius:20px;
   line-height:1.8;
-  font-size:20px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,0.2);
-  backdrop-filter:blur(6px);
+  font-size:18px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-<div class="menu" id="menu">
-  <a href="index.html">AMV</a>
-  <a href="gaming.html">GAMING</a>
-  <a href="about.html">ABOUT</a>
-  <a href="contact.html">CONTACT</a>
-</div>
-
 <h1>JATINfx</h1>
 
 <div class="about">
-  <p>
-  Hi, I’m <b>Jatin Shakya</b>.<br><br>
-  I’m a video editor and motion designer passionate about creating cinematic edits and engaging visual content.
-  My journey started in 10th grade when I began making Marvel and anime edits. What started as curiosity quickly turned into passion.
-  <br><br>
-  I’m constantly learning new techniques, improving my skills, and pushing myself to create better and more creative edits with every project.
-  </p>
-</div>
+<h2>About Me</h2>
 
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
+<p>
+My name is Jatin Shakya, and I am a video editor and motion designer (still learning).
+I started my editing journey in 10th standard by creating Marvel and anime edits.
+As I continued, I realized that this is what I truly want to do — and here I am.
+</p>
+
+<p>
+I love creating AMVs, cinematic edits, and experimenting with motion graphics.
+This website is my portfolio where I share my best work and progress.
+</p>
+
+</div>
 
 </body>
 </html>
