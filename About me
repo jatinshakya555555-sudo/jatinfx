@@ -3,11 +3,14 @@
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About • JATINfx</title>
 
 <style>
+
+/* ===== BACKGROUND ===== */
 body{
   margin:0;
   font-family:Poppins;
@@ -17,53 +20,139 @@ body{
   background-position:center;
   background-attachment:fixed;
 }
+
+/* DARK OVERLAY */
 body::before{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.65);
-  z-index:-1;
+  background:rgba(0,0,0,0.55);
+  z-index:-10;
 }
 
+/* ===== MENU ===== */
+.menu-icon{
+  position:fixed;
+  top:25px;
+  right:25px;
+  font-size:30px;
+  cursor:pointer;
+  z-index:10000;
+}
+
+.menu{
+  position:fixed;
+  top:0;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  padding-top:120px;
+  text-align:center;
+  z-index:9999;
+}
+
+.menu a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  letter-spacing:3px;
+  font-size:20px;
+  margin:25px 0;
+}
+.menu.active{ right:0; }
+
+/* TITLE */
 h1{
   text-align:center;
   padding-top:60px;
-  font-family:Orbitron;
+  font-family:'Orbitron';
   font-size:60px;
   letter-spacing:10px;
 }
 
-.about{
-  max-width:800px;
+/* ABOUT BOX */
+.about-box{
+  max-width:850px;
   margin:80px auto;
-  padding:40px;
-  background:rgba(0,0,0,0.6);
+  padding:50px;
+  background:rgba(0,0,0,0.65);
   border-radius:20px;
-  line-height:1.8;
-  font-size:18px;
+  line-height:1.9;
+  font-size:19px;
 }
+
+/* FOOTER */
+.social-footer{
+  text-align:center;
+  padding:60px 0;
+  letter-spacing:3px;
+}
+.social-icons img{
+  width:45px;
+  margin:20px 12px;
+  transition:.3s;
+}
+.social-icons img:hover{ transform:scale(1.2); }
+
 </style>
 </head>
 
 <body>
 
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
+  <a href="index.html">AMV</a>
+  <a href="gaming.html">GAMING</a>
+  <a href="about.html">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
 <h1>JATINfx</h1>
 
-<div class="about">
+<div class="about-box">
+
 <h2>About Me</h2>
 
 <p>
-My name is Jatin Shakya, and I am a video editor and motion designer (still learning).
+My name is <b>Jatin Shakya</b>, and I am a video editor and motion designer (still learning).
 I started my editing journey in 10th standard by creating Marvel and anime edits.
 As I continued, I realized that this is what I truly want to do — and here I am.
 </p>
 
 <p>
 I love creating AMVs, cinematic edits, and experimenting with motion graphics.
-This website is my portfolio where I share my best work and progress.
+This website is my personal portfolio where I share my best work and progress.
 </p>
 
 </div>
+
+<footer class="social-footer">
+
+<a href="contact.html" style="color:white;text-decoration:none;border-bottom:1px solid white;">
+CONTACT
+</a>
+
+<div class="social-icons">
+<a href="https://www.youtube.com/@jatinaep69" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
+<a href="https://www.instagram.com/jatinaep?igsh=MXQxYzNtbnQ4bzFvaQ==" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+</div>
+
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
