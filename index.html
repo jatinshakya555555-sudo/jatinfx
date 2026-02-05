@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,155 +11,162 @@
 <style>
 
 /* ===== BACKGROUND ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background-image: url("45.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:white;
+  background-image:url("45.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 }
 
 /* DARK OVERLAY */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: -1;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:-1;
 }
 
-/* ===== HAMBURGER MENU ===== */
-.menu-icon {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1001;
+/* ===== MENU ===== */
+.menu-icon{
+  position:fixed;
+  top:25px;
+  right:25px;
+  font-size:30px;
+  cursor:pointer;
+  z-index:1001;
+}
+.menu{
+  position:fixed;
+  top:0;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  padding-top:120px;
+  text-align:center;
+}
+.menu a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  font-family:Poppins;
+  letter-spacing:3px;
+  font-size:20px;
+  margin:25px 0;
+}
+.menu.active{ right:0; }
+
+/* CONTENT WIDTH */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+  padding-bottom:120px;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100%;
-  background: rgba(0,0,0,0.95);
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
-  padding-top: 120px;
-  text-align: center;
-  z-index: 1000;
-}
-
-.menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-family: Poppins;
-  letter-spacing: 3px;
-  font-size: 20px;
-  margin: 25px 0;
-}
-
-.menu.active { right: 0; }
-
-/* ===== CENTER WIDTH ===== */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-  padding-bottom: 120px;   /* 👈 EXTRA SCROLL SPACE */
-}
-
-/* MAIN TITLE */
-h1 {
-  text-align: center;
-  padding-top: 60px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 60px;
-  letter-spacing: 10px;
-  font-weight: 600;
+/* TITLE */
+h1{
+  text-align:center;
+  padding-top:60px;
+  font-family:'Orbitron';
+  font-size:60px;
+  letter-spacing:10px;
 }
 
 /* CATEGORY */
-.category { margin-top: 40px; }
+.category{ margin-top:40px; }
 
-/* AMV FRAME */
-.category h2 {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  letter-spacing: 6px;
-  color: white;
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 25px;
-  border: 2px solid white;
-  text-shadow: 0 0 10px white;
+/* AMV TITLE FRAME */
+.category h2{
+  text-align:center;
+  font-family:'Poppins';
+  font-size:32px;
+  letter-spacing:6px;
+  position:relative;
+  display:inline-block;
+  left:50%;
+  transform:translateX(-50%);
+  padding:10px 25px;
+  border:2px solid white;
+  text-shadow:0 0 10px white;
 }
-
 .category h2::before,
-.category h2::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 150px;
-  height: 2px;
-  background: white;
+.category h2::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:150px;
+  height:2px;
+  background:white;
 }
-.category h2::before { left: -150px; }
-.category h2::after { right: -150px; }
+.category h2::before{ left:-150px; }
+.category h2::after{ right:-150px; }
 
 /* VIDEO GRID */
-.videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 45px;
-  margin-top: 40px;
+.videos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:45px;
+  margin-top:40px;
 }
-
-/* VIDEO */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
+.video-wrapper{
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%;
 }
-.video-wrapper iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  border: none;
+.video-wrapper iframe{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:12px;
+  border:none;
 }
 
 /* VIDEO TITLES */
-.video-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 22px;
-  letter-spacing: 2px;
-  text-align: center;
-  margin: 20px 0;
+.video-title{
+  font-family:'Poppins';
+  font-size:22px;
+  letter-spacing:2px;
+  text-align:center;
+  margin:20px 0;
 }
+.BLUE{ color:#00e5ff; text-shadow:0 0 12px #00e5ff; }
+.white{ color:#ffffff; text-shadow:0 0 12px #ffffff; }
+.PURPLE{ color:#a855f7; text-shadow:0 0 12px #a855f7; }
 
-/* COLORS */
-.BLUE { color:#00e5ff; text-shadow:0 0 12px #00e5ff; }
-.white { color:#ffffff; text-shadow:0 0 12px #ffffff; }
-.PURPLE { color:#a855f7; text-shadow:0 0 12px #a855f7; }
+/* ===== SOCIAL FOOTER ===== */
+.social-footer{
+  text-align:center;
+  padding:60px 0;
+  font-family:Poppins;
+}
+.social-footer a{
+  color:white;
+  text-decoration:none;
+  letter-spacing:3px;
+}
+.social-icons img{
+  width:45px;
+  margin:20px 12px;
+  transition:.3s;
+}
+.social-icons img:hover{
+  transform:scale(1.2);
+}
 
 </style>
 </head>
 
 <body>
 
-<!-- MENU ICON -->
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-<!-- SIDE MENU -->
 <div class="menu" id="menu">
   <a href="index.html">AMV</a>
   <a href="gaming.html">GAMING</a>
@@ -169,57 +176,66 @@ h1 {
 <h1>JATINfx</h1>
 
 <div class="container">
-  <div class="category">
-    <h2>AMV</h2>
+<div class="category">
+<h2>AMV</h2>
 
-    <div class="videos">
+<div class="videos">
 
-      <div>
-        <div class="video-title BLUE">STEVE HARRINGTON</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/OWfS-pP80gw?vq=hd1080&rel=0&modestbranding=1" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <!-- LOCAL VIDEO -->
-      <div>
-        <div class="video-title" style="color:#00ff9c;">Your Name</div>
-        <video controls width="100%" style="border-radius:12px;">
-          <source src="Sequence 01 .mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div>
-        <div class="video-title white">GOJO VS HOMELANDER</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/vxiCEWPI2zY?vq=hd1080&rel=0&modestbranding=1" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div>
-        <div class="video-title PURPLE">EKAKI EDIT</div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/BSkWmlfeAgE?vq=hd1080&rel=0&modestbranding=1" allowfullscreen></iframe>
-        </div>
-      </div>
-
-    </div>
-  </div>
+<div>
+<div class="video-title BLUE">STEVE HARRINGTON</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/OWfS-pP80gw?vq=hd1080&rel=0&modestbranding=1"></iframe>
+</div>
 </div>
 
-<!-- 👇 FOOTER CONTACT -->
-<footer style="text-align:center; padding:40px 0; font-family:Poppins; letter-spacing:3px;">
-  <a href="contact.html" style="color:white; text-decoration:none; border-bottom:1px solid white;">
-    CONTACT
-  </a>
+<div>
+<div class="video-title" style="color:#00ff9c;">Your Name</div>
+<video controls width="100%" style="border-radius:12px;">
+<source src="Sequence 01 .mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+<div class="video-title white">GOJO VS HOMELANDER</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/vxiCEWPI2zY?vq=hd1080&rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+<div>
+<div class="video-title PURPLE">EKAKI EDIT</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/BSkWmlfeAgE?vq=hd1080&rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- SOCIAL FOOTER -->
+<footer class="social-footer">
+
+<a href="contact.html">CONTACT</a>
+
+<div class="social-icons">
+
+<a href="https://www.youtube.com/@jatinaep69" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
+<a href="https://www.instagram.com/jatinaep?igsh=MXQxYzNtbnQ4bzFvaQ==" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+</div>
 </footer>
 
 <script>
 function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
 </body>
 </html>
-
