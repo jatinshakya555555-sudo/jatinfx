@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,14 +77,6 @@ body::before{
   width:100%;
   padding-bottom:56.25%;
 }
-
-/* YOUTUBE DOUBLE CLICK BLOCKER */
-.yt-blocker{
-  position:absolute;
-  inset:0;
-  z-index:5;
-}
-
 .video-wrapper iframe{
   position:absolute;
   width:100%;
@@ -94,6 +85,7 @@ body::before{
   border:none;
 }
 
+/* VIDEO TITLES */
 .video-title{
   font-family:'Poppins';
   font-size:22px;
@@ -101,7 +93,6 @@ body::before{
   text-align:center;
   margin:20px 0;
 }
-
 .BLUE{ color:#00e5ff; text-shadow:0 0 12px #00e5ff; }
 .white{ color:#ffffff; text-shadow:0 0 12px #ffffff; }
 .PURPLE{ color:#a855f7; text-shadow:0 0 12px #a855f7; }
@@ -146,8 +137,7 @@ body::before{
 <div>
 <div class="video-title BLUE">STEVE HARRINGTON</div>
 <div class="video-wrapper">
-  <iframe src="https://www.youtube.com/embed/OWfS-pP80gw?vq=hd1080&rel=0&modestbranding=1"></iframe>
-  <div class="yt-blocker"></div>
+<iframe class="ytvideo" src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
 </div>
 </div>
 
@@ -161,16 +151,14 @@ body::before{
 <div>
 <div class="video-title white">GOJO VS HOMELANDER</div>
 <div class="video-wrapper">
-  <iframe src="https://www.youtube.com/embed/vxiCEWPI2zY?vq=hd1080&rel=0&modestbranding=1"></iframe>
-  <div class="yt-blocker"></div>
+<iframe class="ytvideo" src="https://www.youtube.com/embed/vxiCEWPI2zY?rel=0&modestbranding=1"></iframe>
 </div>
 </div>
 
 <div>
 <div class="video-title PURPLE">EKAKI EDIT</div>
 <div class="video-wrapper">
-  <iframe src="https://www.youtube.com/embed/BSkWmlfeAgE?vq=hd1080&rel=0&modestbranding=1"></iframe>
-  <div class="yt-blocker"></div>
+<iframe class="ytvideo" src="https://www.youtube.com/embed/BSkWmlfeAgE?rel=0&modestbranding=1"></iframe>
 </div>
 </div>
 
@@ -195,6 +183,13 @@ body::before{
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
+
+/* DOUBLE CLICK DISABLE (WORKING METHOD) */
+document.addEventListener("dblclick", function(e){
+  if(e.target.closest(".video-wrapper")){
+    e.preventDefault();
+  }
+});
 </script>
 
 </body>
