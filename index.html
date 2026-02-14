@@ -73,7 +73,7 @@ body::before{
 }
 .profile-pic{
   width:120px;
-  height:120px;
+  aspect-ratio:1/1;   /* ⭐ keeps perfect circle */
   border-radius:50%;
   object-fit:cover;
 }
@@ -228,5 +228,6 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
+
 
 
