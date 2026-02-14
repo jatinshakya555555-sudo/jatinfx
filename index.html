@@ -8,7 +8,6 @@
 <title>JATINfx</title>
 
 <style>
-
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -85,7 +84,6 @@ body::before{
   border:none;
 }
 
-/* VIDEO TITLES */
 .video-title{
   font-family:'Poppins';
   font-size:22px;
@@ -93,9 +91,8 @@ body::before{
   text-align:center;
   margin:20px 0;
 }
+
 .BLUE{ color:#00e5ff; text-shadow:0 0 12px #00e5ff; }
-.white{ color:#ffffff; text-shadow:0 0 12px #ffffff; }
-.PURPLE{ color:#a855f7; text-shadow:0 0 12px #a855f7; }
 
 /* FOOTER */
 .social-footer{
@@ -116,7 +113,6 @@ body::before{
 .social-icons img:hover{
   transform:scale(1.2);
 }
-
 </style>
 </head>
 
@@ -137,7 +133,7 @@ body::before{
 <div>
 <div class="video-title BLUE">STEVE HARRINGTON</div>
 <div class="video-wrapper">
-<iframe class="ytvideo" src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
+<iframe src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
 </div>
 </div>
 
@@ -146,20 +142,6 @@ body::before{
 <video controls width="100%" style="border-radius:12px;">
 <source src="Sequence 01 .mp4" type="video/mp4">
 </video>
-</div>
-
-<div>
-<div class="video-title white">GOJO VS HOMELANDER</div>
-<div class="video-wrapper">
-<iframe class="ytvideo" src="https://www.youtube.com/embed/vxiCEWPI2zY?rel=0&modestbranding=1"></iframe>
-</div>
-</div>
-
-<div>
-<div class="video-title PURPLE">EKAKI EDIT</div>
-<div class="video-wrapper">
-<iframe class="ytvideo" src="https://www.youtube.com/embed/BSkWmlfeAgE?rel=0&modestbranding=1"></iframe>
-</div>
 </div>
 
 </div>
@@ -183,13 +165,6 @@ body::before{
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
-
-/* DOUBLE CLICK DISABLE (WORKING METHOD) */
-document.addEventListener("dblclick", function(e){
-  if(e.target.closest(".video-wrapper")){
-    e.preventDefault();
-  }
-});
 </script>
 
 </body>
