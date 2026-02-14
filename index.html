@@ -71,12 +71,20 @@ body::before{
   gap:30px;
   margin-bottom:40px;
 }
+
+/* ⭐ PHOTO BLACK & WHITE ADDED HERE */
 .profile-pic{
   width:120px;
-  aspect-ratio:1/1;   /* ⭐ keeps perfect circle */
+  aspect-ratio:1/1;
   border-radius:50%;
   object-fit:cover;
+  filter: grayscale(100%);
+  transition:0.4s;
 }
+.profile-pic:hover{
+  filter: grayscale(0%);
+}
+
 .hero-name{
   font-family:Poppins;
   font-size:40px;
@@ -158,19 +166,18 @@ body::before{
 
 <div class="container">
 
-<!-- PHOTO + NAME -->
 <div class="hero-top">
   <img src="https://raw.githubusercontent.com/jatinshakya555555-sudo/jatinfx/main/jatin.jpeg" class="profile-pic">
   <h2 class="hero-name">My name is <span>Jatin Shakya</span></h2>
 </div>
 
-<!-- FULL WIDTH SUMMARY -->
 <div class="hero-summary">
   I'm a Video Editor and Motion Designer.<br>
   I love creating cinematic edits and gaming montages.<br>
   I enjoy experimenting with motion graphics and learning new skills.<br>
   Currently available for freelance projects.
 </div>
+
 <div class="videos">
 
 <div>
@@ -228,10 +235,3 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
-
-
-
-
-
-
-
