@@ -64,36 +64,36 @@ body::before{
   padding:120px 20px;
 }
 
-/* HERO PROFILE */
-.hero{
+/* HERO TOP (PHOTO + NAME) */
+.hero-top{
   display:flex;
   align-items:center;
-  gap:25px;
-  margin-bottom:60px;
+  gap:30px;
+  margin-bottom:40px;
 }
 .profile-pic{
   width:120px;
   height:120px;
   border-radius:50%;
   object-fit:cover;
-  border:none;          /* ⭐ border removed */
-  box-shadow:none;      /* ⭐ glow removed */
 }
-.hero-text h2{
+.hero-name{
   font-family:Poppins;
+  font-size:40px;
   letter-spacing:3px;
-  margin:0;
 }
-.hero-text p{
-  font-family:Poppins;
-  opacity:0.8;
-  margin-top:8px;
-  line-height:1.5;
+.hero-name span{
+  color:#ff7a00;
 }
 
-/* ORANGE NAME */
-.name{
-  color:#ff7a00;
+/* FULL WIDTH SUMMARY */
+.hero-summary{
+  font-family:Poppins;
+  font-size:20px;
+  opacity:0.85;
+  line-height:1.7;
+  max-width:900px;
+  margin-bottom:60px;
 }
 
 /* VIDEO GRID */
@@ -102,7 +102,6 @@ body::before{
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:45px;
 }
-
 .video-wrapper{
   position:relative;
   width:100%;
@@ -115,7 +114,6 @@ body::before{
   border-radius:12px;
   border:none;
 }
-
 .video-title{
   font-family:'Poppins';
   font-size:22px;
@@ -123,8 +121,6 @@ body::before{
   text-align:center;
   margin:20px 0;
 }
-
-/* STEVE TITLE WHITE */
 .BLUE{ color:#ffffff; }
 
 /* FOOTER */
@@ -162,17 +158,17 @@ body::before{
 
 <div class="container">
 
-<!-- HERO PROFILE -->
-<div class="hero">
+<!-- PHOTO + NAME -->
+<div class="hero-top">
   <img src="https://raw.githubusercontent.com/jatinshakya555555-sudo/jatinfx/main/Screenshot%202026-02-03%20195337.png" class="profile-pic">
-  <div class="hero-text">
-    <h2>My name is <span class="name">Jatin Shakya</span></h2>
-    <p>
-      I'm a Video Editor and Motion Designer (Beginner).<br>
-      I love creating cinematic edits, anime AMVs and gaming montages.<br>
-      Currently learning and available for small freelance projects.
-    </p>
-  </div>
+  <h2 class="hero-name">My name is <span>Jatin Shakya</span></h2>
+</div>
+
+<!-- FULL WIDTH SUMMARY -->
+<div class="hero-summary">
+  I'm a Video Editor and Motion Designer (Beginner).<br>
+  I love creating cinematic edits, anime AMVs and gaming montages.<br>
+  Currently learning and available for small freelance projects.
 </div>
 
 <div class="videos">
@@ -215,11 +211,9 @@ body::before{
 <a href="https://www.youtube.com/@jatinaep69" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 </a>
-
 <a href="https://www.instagram.com/jatinaep" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
 </a>
-
 <a href="https://wa.me/919079198293" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
