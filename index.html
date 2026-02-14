@@ -10,7 +10,6 @@
 
 <style>
 
-/* ===== BACKGROUND ===== */
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -21,23 +20,22 @@ body{
   background-attachment:fixed;
 }
 
-/* DARK OVERLAY (ALWAYS BOTTOM) */
 body::before{
   content:"";
   position:fixed;
   inset:0;
   background:rgba(0,0,0,0.55);
-  z-index:-10;   /* ⭐ FIX */
+  z-index:-10;
 }
 
-/* ===== MENU ===== */
+/* MENU */
 .menu-icon{
   position:fixed;
   top:25px;
   right:25px;
   font-size:30px;
   cursor:pointer;
-  z-index:10000;   /* ⭐ FIX */
+  z-index:10000;
 }
 
 .menu{
@@ -51,7 +49,7 @@ body::before{
   transition:.4s;
   padding-top:120px;
   text-align:center;
-  z-index:9999;   /* ⭐ FIX */
+  z-index:9999;
 }
 
 .menu a{
@@ -65,59 +63,19 @@ body::before{
 }
 .menu.active{ right:0; }
 
-/* CONTENT WIDTH */
 .container{
   max-width:1100px;
   margin:auto;
-  padding:0 20px;
-  padding-bottom:120px;
+  padding:120px 20px;
 }
-
-/* TITLE */
-h1{
-  text-align:center;
-  padding-top:60px;
-  font-family:'Orbitron';
-  font-size:60px;
-  letter-spacing:10px;
-}
-
-/* CATEGORY */
-.category{ margin-top:40px; }
-
-/* AMV TITLE FRAME */
-.category h2{
-  text-align:center;
-  font-family:'Poppins';
-  font-size:32px;
-  letter-spacing:6px;
-  position:relative;
-  display:inline-block;
-  left:50%;
-  transform:translateX(-50%);
-  padding:10px 25px;
-  border:2px solid white;
-  text-shadow:0 0 10px white;
-}
-.category h2::before,
-.category h2::after{
-  content:"";
-  position:absolute;
-  top:50%;
-  width:150px;
-  height:2px;
-  background:white;
-}
-.category h2::before{ left:-150px; }
-.category h2::after{ right:-150px; }
 
 /* VIDEO GRID */
 .videos{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:45px;
-  margin-top:40px;
 }
+
 .video-wrapper{
   position:relative;
   width:100%;
@@ -131,7 +89,6 @@ h1{
   border:none;
 }
 
-/* VIDEO TITLES */
 .video-title{
   font-family:'Poppins';
   font-size:22px;
@@ -139,11 +96,12 @@ h1{
   text-align:center;
   margin:20px 0;
 }
+
 .BLUE{ color:#00e5ff; text-shadow:0 0 12px #00e5ff; }
 .white{ color:#ffffff; text-shadow:0 0 12px #ffffff; }
 .PURPLE{ color:#a855f7; text-shadow:0 0 12px #a855f7; }
 
-/* ===== SOCIAL FOOTER ===== */
+/* FOOTER */
 .social-footer{
   text-align:center;
   padding:60px 0;
@@ -177,11 +135,7 @@ h1{
   <a href="./contact.html">CONTACT</a>
 </div>
 
-<h1>JATINfx</h1>
-
 <div class="container">
-<div class="category">
-<h2>AMV</h2>
 
 <div class="videos">
 
@@ -215,7 +169,6 @@ h1{
 
 </div>
 </div>
-</div>
 
 <footer class="social-footer">
 <a href="contact.html">CONTACT</a>
@@ -225,7 +178,7 @@ h1{
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 </a>
 
-<a href="https://www.instagram.com/jatinaep?igsh=MXQxYzNtbnQ4bzFvaQ==" target="_blank">
+<a href="https://www.instagram.com/jatinaep" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
 </a>
 </div>
@@ -239,4 +192,3 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
-
