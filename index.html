@@ -36,6 +36,24 @@ body::before{
   z-index:9000;
 }
 
+/* ⭐ CLICKABLE LOGO */
+.logo{
+  position:fixed;
+  top:18px;
+  left:25px;
+  font-family:Poppins;
+  font-size:26px;
+  letter-spacing:2px;
+  z-index:10001;
+}
+.logo a{
+  text-decoration:none;
+  color:white;
+}
+.logo span{
+  color:#E56717;
+}
+
 /* MENU ICON */
 .menu-icon{
   position:fixed;
@@ -157,8 +175,12 @@ body::before{
 
 <body>
 
-<!-- ⭐ BLACK TOP BAR -->
 <div class="topbar"></div>
+
+<!-- ⭐ CLICKABLE LOGO -->
+<div class="logo">
+  <a href="./">Jatin<span>Fx</span></a>
+</div>
 
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
