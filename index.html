@@ -74,16 +74,28 @@ body::before{
   text-align:center;
   z-index:9999;
 }
+.menu.active{ right:0; }
+
+/* ⭐ MENU COLORS ADDED */
 .menu a{
   display:block;
-  color:white;
   text-decoration:none;
   font-family:Poppins;
   letter-spacing:3px;
   font-size:20px;
   margin:25px 0;
+  transition:.3s;
 }
-.menu.active{ right:0; }
+
+.menu a:nth-child(1){ color:#FFA500; } /* HOME */
+.menu a:nth-child(2){ color:#E09121; } /* GAMING */
+.menu a:nth-child(3){ color:#EFB261; } /* ABOUT */
+.menu a:nth-child(4){ color:#FF8040; } /* CONTACT */
+
+.menu a:hover{
+  transform:scale(1.1);
+  text-shadow:0 0 10px currentColor;
+}
 
 .container{
   max-width:1100px;
@@ -119,8 +131,8 @@ body::before{
 }
 
 /* SWAPPED COLORS */
-.videoColor{ color:#FFA500; }     /* Video Editor */
-.motionColor{ color:#E56717; }    /* Motion Designer */
+.videoColor{ color:#FFA500; }
+.motionColor{ color:#E56717; }
 
 /* VIDEO GRID */
 .videos{
