@@ -25,7 +25,7 @@ body::before{
   z-index:-10;
 }
 
-/* 🔥 TOP BLACK BAR */
+/* TOP BAR */
 .topbar{
   position:fixed;
   top:0;
@@ -36,7 +36,7 @@ body::before{
   z-index:9000;
 }
 
-/* ⭐ CLICKABLE LOGO */
+/* LOGO */
 .logo{
   position:fixed;
   top:18px;
@@ -46,13 +46,8 @@ body::before{
   letter-spacing:2px;
   z-index:10001;
 }
-.logo a{
-  text-decoration:none;
-  color:white;
-}
-.logo span{
-  color:#E56717;
-}
+.logo a{ text-decoration:none; color:white; }
+.logo span{ color:#E56717; }
 
 /* MENU ICON */
 .menu-icon{
@@ -62,7 +57,7 @@ body::before{
   font-size:30px;
   cursor:pointer;
   z-index:10000;
-  color:#E56717;   /* ⭐ FX ORANGE COLOR */
+  color:#E56717;
 }
 
 /* SIDE MENU */
@@ -111,9 +106,7 @@ body::before{
   filter: grayscale(100%);
   transition:0.4s;
 }
-.profile-pic:hover{
-  filter: grayscale(0%);
-}
+.profile-pic:hover{ filter: grayscale(0%); }
 
 /* SUMMARY */
 .hero-summary{
@@ -124,6 +117,9 @@ body::before{
   max-width:900px;
   margin-bottom:60px;
 }
+
+/* ORANGE TEXT */
+.highlight{ color:#E56717; }
 
 /* VIDEO GRID */
 .videos{
@@ -158,19 +154,12 @@ body::before{
   padding:60px 0;
   font-family:Poppins;
 }
-.social-footer a{
-  color:white;
-  text-decoration:none;
-  letter-spacing:3px;
-}
 .social-icons img{
   width:45px;
   margin:20px 12px;
   transition:.3s;
 }
-.social-icons img:hover{
-  transform:scale(1.2);
-}
+.social-icons img:hover{ transform:scale(1.2); }
 </style>
 </head>
 
@@ -178,7 +167,6 @@ body::before{
 
 <div class="topbar"></div>
 
-<!-- ⭐ CLICKABLE LOGO -->
 <div class="logo">
   <a href="./">Jatin<span>Fx</span></a>
 </div>
@@ -199,7 +187,7 @@ body::before{
 </div>
 
 <div class="hero-summary">
-  I'm a Video Editor and Motion Designer.<br>
+  I'm a <span class="highlight">Video Editor and Motion Designer.</span><br>
   I love creating cinematic edits and gaming montages.<br>
   I enjoy experimenting with motion graphics and learning new skills.<br>
   Currently available for freelance projects.
@@ -239,8 +227,6 @@ body::before{
 </div>
 
 <footer class="social-footer">
-<a href="contact.html">CONTACT</a>
-
 <div class="social-icons">
 <a href="https://www.youtube.com/@jatinaep69" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
@@ -262,4 +248,3 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
-
