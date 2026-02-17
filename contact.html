@@ -7,54 +7,115 @@
 <title>Contact - JATINfx</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background-image: url("45.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:white;
+  background-image:url("45.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:-10;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: -1;
+/* TOP BAR */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:#000;
+  z-index:9000;
 }
 
-.container {
-  text-align: center;
-  margin-top: 120px;
-  padding-bottom: 120px; /* ⭐ space BELOW back button */
-  font-family: 'Poppins', sans-serif;
+/* LOGO */
+.logo{
+  position:fixed;
+  top:18px;
+  left:25px;
+  font-family:Poppins;
+  font-size:26px;
+  letter-spacing:2px;
+  z-index:10001;
+}
+.logo a{ text-decoration:none; color:white; }
+.logo span{ color:#E56717; }
+
+/* MENU ICON */
+.menu-icon{
+  position:fixed;
+  top:18px;
+  right:25px;
+  font-size:30px;
+  cursor:pointer;
+  z-index:10000;
+  color:#E56717;
 }
 
-h1 {
-  font-size: 50px;
-  letter-spacing: 6px;
+/* SIDE MENU */
+.menu{
+  position:fixed;
+  top:0;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  padding-top:120px;
+  text-align:center;
+  z-index:9999;
+}
+.menu a{
+  display:block;
+  text-decoration:none;
+  font-family:Poppins;
+  letter-spacing:3px;
+  font-size:20px;
+  margin:25px 0;
+}
+.menu a:nth-child(1){ color:#FFA500; }
+.menu a:nth-child(2){ color:#E09121; }
+.menu a:nth-child(3){ color:#EFB261; }
+.menu a:nth-child(4){ color:#FF8040; }
+.menu.active{ right:0; }
+
+/* PAGE CONTENT */
+.container{
+  text-align:center;
+  margin-top:150px;
+  padding-bottom:120px;
+  font-family:Poppins;
 }
 
-.email-box {
-  margin-top: 40px;
-  font-size: 24px;
-  padding: 20px 30px;
-  border: 2px solid white;
-  display: inline-block;
-  border-radius: 10px;
+h1{
+  font-size:50px;
+  letter-spacing:6px;
 }
 
-a {
-  color: #00e5ff;
-  text-decoration: none;
+.email-box{
+  margin-top:40px;
+  font-size:24px;
+  padding:20px 30px;
+  border:2px solid white;
+  display:inline-block;
+  border-radius:10px;
 }
 
-/* BACK HOME BUTTON */
+.email-box a{
+  color:#00e5ff;
+  text-decoration:none;
+}
+
 .back-home{
   margin-top:120px;
-  font-family:Poppins;
 }
 .back-home a{
   color:white;
@@ -68,14 +129,27 @@ a {
 
 <body>
 
+<div class="topbar"></div>
+
+<div class="logo">
+  <a href="./">Jatin<span>Fx</span></a>
+</div>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
+  <a href="./">HOME</a>
+  <a href="./gaming.html">GAMING</a>
+  <a href="./about.html">ABOUT</a>
+  <a href="./contact.html">CONTACT</a>
+</div>
+
 <div class="container">
   <h1>Contact Me</h1>
 
   <div class="email-box">
     📧 Email:<br><br>
-    <a href="mailto:jaxoeae@gmail.com">
-     jaxoeae@gmail.com
-    </a>
+    <a href="mailto:jaxoeae@gmail.com">jaxoeae@gmail.com</a>
   </div>
 
   <br><br>
@@ -90,8 +164,13 @@ a {
   <div class="back-home">
     <a href="index.html">← BACK TO HOME</a>
   </div>
-
 </div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
