@@ -81,10 +81,10 @@ body::before{
   font-size:20px;
   margin:25px 0;
 }
-.menu a:nth-child(1){ color:#FFA500; } /* HOME */
-.menu a:nth-child(2){ color:#E09121; } /* GAMING */
-.menu a:nth-child(3){ color:#EFB261; } /* ABOUT */
-.menu a:nth-child(4){ color:#FF8040; } /* CONTACT */
+.menu a:nth-child(1){ color:#FFA500; }
+.menu a:nth-child(2){ color:#E09121; }
+.menu a:nth-child(3){ color:#EFB261; }
+.menu a:nth-child(4){ color:#FF8040; }
 .menu.active{ right:0; }
 
 /* PAGE CONTENT */
@@ -94,13 +94,31 @@ body::before{
   padding:150px 20px 80px;
 }
 
+/* 🎮 GAMING TITLE WITH CONTROLLER */
 .page-title{
   text-align:center;
   font-family:Poppins;
   letter-spacing:6px;
-  font-size:32px;
-  color:#00ff9d;
-  text-shadow:0 0 12px #00ff9d;
+  font-size:38px;
+  color:#ffffff;
+  position:relative;
+  margin-top:40px;
+}
+
+/* Controller behind text */
+.page-title::before{
+  content:"";
+  position:absolute;
+  top:-50px;
+  left:50%;
+  transform:translateX(-50%);
+  width:220px;
+  height:220px;
+  background:url("https://cdn-icons-png.flaticon.com/512/686/686589.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  opacity:0.15;
+  z-index:-1;
 }
 
 .videos{
