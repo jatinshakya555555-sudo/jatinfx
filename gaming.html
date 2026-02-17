@@ -7,9 +7,9 @@
 <title>Gaming - JATINfx</title>
 
 <style>
-body {
+body{
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   color:white;
   background-image:url("45.jpg");
   background-size:cover;
@@ -21,22 +21,77 @@ body::before{
   position:fixed;
   inset:0;
   background:rgba(0,0,0,0.55);
-  z-index:-1;
+  z-index:-10;
 }
 
-h1{
-  text-align:center;
-  padding-top:60px;
+/* TOP BAR */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:#000;
+  z-index:9000;
+}
+
+/* LOGO */
+.logo{
+  position:fixed;
+  top:18px;
+  left:25px;
   font-family:Poppins;
-  font-size:50px;
-  letter-spacing:6px;
-  text-shadow:0 0 12px #00e5ff;
+  font-size:26px;
+  letter-spacing:2px;
+  z-index:10001;
+}
+.logo a{ text-decoration:none; color:white; }
+.logo span{ color:#E56717; }
+
+/* MENU ICON */
+.menu-icon{
+  position:fixed;
+  top:18px;
+  right:25px;
+  font-size:30px;
+  cursor:pointer;
+  z-index:10000;
+  color:#E56717;
 }
 
+/* SIDE MENU */
+.menu{
+  position:fixed;
+  top:0;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  padding-top:120px;
+  text-align:center;
+  z-index:9999;
+}
+.menu a{
+  display:block;
+  text-decoration:none;
+  font-family:Poppins;
+  letter-spacing:3px;
+  font-size:20px;
+  margin:25px 0;
+}
+.menu a:nth-child(1){ color:#FFA500; } /* HOME */
+.menu a:nth-child(2){ color:#E09121; } /* GAMING */
+.menu a:nth-child(3){ color:#EFB261; } /* ABOUT */
+.menu a:nth-child(4){ color:#FF8040; } /* CONTACT */
+.menu.active{ right:0; }
+
+/* PAGE CONTENT */
 .container{
   max-width:1100px;
   margin:auto;
-  padding:0 20px;
+  padding:150px 20px 80px;
 }
 
 .page-title{
@@ -44,7 +99,6 @@ h1{
   font-family:Poppins;
   letter-spacing:6px;
   font-size:32px;
-  margin-top:40px;
   color:#00ff9d;
   text-shadow:0 0 12px #00ff9d;
 }
@@ -55,7 +109,6 @@ h1{
   gap:45px;
   margin-top:40px;
 }
-
 .video-wrapper{
   position:relative;
   padding-bottom:56.25%;
@@ -84,18 +137,29 @@ h1{
 
 <body>
 
-<h1>jatinfx</h1>
+<div class="topbar"></div>
+
+<div class="logo">
+  <a href="./">Jatin<span>Fx</span></a>
+</div>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
+  <a href="./">HOME</a>
+  <a href="./gaming.html">GAMING</a>
+  <a href="./about.html">ABOUT</a>
+  <a href="./contact.html">CONTACT</a>
+</div>
 
 <div class="container">
 
 <h2 class="page-title">GAMING</h2>
 
 <div class="videos">
-
-<div class="video-wrapper">
-  <iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1" allowfullscreen></iframe>
-</div>
-
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1" allowfullscreen></iframe>
+  </div>
 </div>
 
 <div class="back">
@@ -103,6 +167,12 @@ h1{
 </div>
 
 </div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
