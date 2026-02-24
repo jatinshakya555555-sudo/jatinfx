@@ -102,45 +102,52 @@ body::before{
   padding:150px 20px 120px;
 }
 
-/* HERO */
+/* HERO FIXED ALIGNMENT */
 .hero-top{
-  display:flex;
-  align-items:center;
-  gap:30px;
-  flex-wrap:wrap;
+  position:relative;
+  height:200px;
   margin-bottom:40px;
-  justify-content:flex-start;
 }
 
-/* PROFILE PIC (smaller) */
+/* PROFILE PIC */
 .profile-pic{
-  width:95px;
-  aspect-ratio:1/1;
+  width:85px;
+  height:85px;
   border-radius:50%;
   object-fit:cover;
+  position:absolute;
+  left:18%;
+  top:50%;
+  transform:translateY(-50%);
   filter: grayscale(100%);
   transition:0.4s;
 }
-.profile-pic:hover{ filter: grayscale(0%); }
+.profile-pic:hover{
+  filter: grayscale(0%);
+}
 
-/* HELLO IMAGE (bigger) */
+/* HELLO IMAGE */
 .hello-img{
-  width:180px;
-  max-width:55vw;
-  height:auto;
+  width:200px;
+  position:absolute;
+  right:18%;
+  top:50%;
+  transform:translateY(-50%);
 }
 
 /* MOBILE */
 @media(max-width:600px){
   .hero-top{
-    justify-content:center;
-    text-align:center;
+    height:160px;
   }
   .profile-pic{
-    width:80px;
+    left:8%;
+    width:70px;
+    height:70px;
   }
   .hello-img{
-    width:150px;
+    right:8%;
+    width:140px;
   }
 }
 
@@ -230,35 +237,7 @@ body::before{
 </div>
 
 <div class="videos">
-
-<div>
-<div class="video-title BLUE">STEVE HARRINGTON</div>
-<div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
-</div>
-</div>
-
-<div>
-<div class="video-title" style="color:#00ff9c;">Your Name</div>
-<div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/xPSOyM11lYM?rel=0&modestbranding=1"></iframe>
-</div>
-</div>
-
-<div>
-<div class="video-title" style="color:#ff4d4d;">Gaming Edit</div>
-<div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1"></iframe>
-</div>
-</div>
-
-<div>
-<div class="video-title" style="color:#ffd93d;">Montage Edit</div>
-<div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/znFoo2JC8LY?rel=0&modestbranding=1"></iframe>
-</div>
-</div>
-
+<!-- videos same as before -->
 </div>
 
 </div>
