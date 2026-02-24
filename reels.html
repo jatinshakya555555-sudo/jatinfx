@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Reels - JatinFx</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#1B1212;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+h1{
+  font-size:40px;
+  margin-bottom:60px;
+  letter-spacing:3px;
+}
+
+.reels-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+  max-width:900px;
+  margin:auto;
+}
+
+.video-wrapper{
+  position:relative;
+  width:100%;
+  padding-bottom:177.77%; /* 9:16 ratio for Shorts */
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:20px;
+  border:none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>My Reels</h1>
+
+<div class="reels-grid">
+
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/8mFG_zat_SU"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+</body>
+</html>
