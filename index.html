@@ -163,6 +163,43 @@ body{
 .someColor{ color:#E56717; }
 .worksColor{ color:#FFA85C; }
 
+  /* REELS SECTION */
+.reels-section{
+  text-align:center;
+  margin:100px 0 80px;
+}
+
+.reels-card{
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+  border-radius:20px;
+  transition:.4s;
+}
+
+.reels-card img{
+  width:300px;
+  border-radius:20px;
+  transition:.4s;
+}
+
+.reels-card:hover{
+  transform:scale(1.05);
+}
+
+.reels-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Poppins;
+  font-size:24px;
+  letter-spacing:2px;
+}
+
 /* VIDEO GRID */
 .videos{
   display:grid;
@@ -299,6 +336,18 @@ body{
   </div>
 
 </div>
+  <div class="reels-section">
+
+  <h2 class="section-heading">
+    <span class="someColor">My</span> <span class="worksColor">Reels</span>
+  </h2>
+
+  <a href="reels.html">
+    <div class="reels-card">
+      <img src="reel-thumbnail.jpg">
+      <div class="reels-overlay">VIEW REELS</div>
+    </div>
+  </a>
 
 </div>
 
@@ -327,4 +376,5 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
+
 
