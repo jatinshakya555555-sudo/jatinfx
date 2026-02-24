@@ -98,7 +98,6 @@ body{
   margin-bottom:30px;
 }
 
-/* PROFILE */
 .profile-pic{
   width:180px;
   height:180px;
@@ -111,11 +110,8 @@ body{
   filter: grayscale(100%);
   transition:.4s;
 }
-.profile-pic:hover{
-  filter: grayscale(0%);
-}
+.profile-pic:hover{ filter: grayscale(0%); }
 
-/* HELLO */
 .hello-img{
   width:400px;
   position:absolute;
@@ -124,25 +120,21 @@ body{
   transform:translateY(-50%);
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media(max-width:600px){
-  .hero-top{
-    height:170px;
-  }
+  .hero-top{ height:170px; }
 
   .profile-pic{
     left:5%;
     width:90px;
     height:90px;
     top:38%;
-    transform:translateY(-50%);
   }
 
   .hello-img{
     right:5%;
     width:260px;
     top:58%;
-    transform:translateY(-50%);
   }
 }
 
@@ -156,8 +148,19 @@ body{
   text-align:center;
 }
 
-.videoColor{ color:#FFA500; }
 .motionColor{ color:#E56717; }
+
+/* 🔥 WORKS HEADING */
+.section-heading{
+  text-align:center;
+  font-family:Poppins;
+  font-size:32px;
+  letter-spacing:4px;
+  margin:40px 0 50px;
+}
+.section-heading span{
+  color:#FFA85C;
+}
 
 /* VIDEO GRID */
 .videos{
@@ -199,7 +202,6 @@ body{
 }
 .social-icons img:hover{ transform:scale(1.2); }
 
-/* 🔥 CONTACT BUTTON */
 .contact-btn{
   display:inline-block;
   margin-top:30px;
@@ -244,21 +246,19 @@ body{
 </div>
 
 <div class="hero-summary">
-
   My name is <span class="motionColor">Jatin</span>, a Video Editor and Motion Designer from Rajasthan.
   I love turning simple ideas into cinematic visuals and expressive edits.
-
   <br><br>
-
   I began my editing journey during school, starting with anime and Marvel edits.
   Over time, it became more than just a hobby — it became something I genuinely enjoy.
-
   <br><br>
-
   Now, I create gaming montages, cinematic edits and experiment with motion graphics.
   I’m constantly learning and improving my craft.
-
 </div>
+
+<h2 class="section-heading">
+  Some of My <span>Works</span>
+</h2>
 
 <div class="videos">
 
@@ -318,4 +318,3 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
-
