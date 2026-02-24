@@ -150,7 +150,7 @@ body{
 
 .motionColor{ color:#E56717; }
 
-/* 🔥 WORKS HEADING */
+/* WORKS HEADING */
 .section-heading{
   text-align:center;
   font-family:Poppins;
@@ -160,14 +160,8 @@ body{
   white-space:nowrap;
 }
 
-/* NEW COLORS */
-.someColor{
-  color:#E56717;   /* Orange */
-}
-
-.worksColor{
-  color:#FFA85C;   /* Light Orange */
-}
+.someColor{ color:#E56717; }
+.worksColor{ color:#FFA85C; }
 
 /* VIDEO GRID */
 .videos{
@@ -175,11 +169,13 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:45px;
 }
+
 .video-wrapper{
   position:relative;
   width:100%;
   padding-bottom:56.25%;
 }
+
 .video-wrapper iframe{
   position:absolute;
   width:100%;
@@ -187,6 +183,7 @@ body{
   border-radius:12px;
   border:none;
 }
+
 .video-title{
   font-family:Poppins;
   font-size:22px;
@@ -194,6 +191,7 @@ body{
   text-align:center;
   margin:20px 0;
 }
+
 .BLUE{ color:#ffffff; }
 
 /* FOOTER */
@@ -202,11 +200,13 @@ body{
   padding:60px 0;
   font-family:Poppins;
 }
+
 .social-icons img{
   width:45px;
   margin:20px 12px;
   transition:.3s;
 }
+
 .social-icons img:hover{ transform:scale(1.2); }
 
 .contact-btn{
@@ -221,6 +221,7 @@ body{
   border-radius:30px;
   transition:.3s;
 }
+
 .contact-btn:hover{
   background:#ff7a26;
   transform:scale(1.05);
@@ -268,3 +269,61 @@ body{
 </h2>
 
 <div class="videos">
+
+  <div>
+    <div class="video-title BLUE">STEVE HARRINGTON</div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
+    </div>
+  </div>
+
+  <div>
+    <div class="video-title" style="color:#00ff9c;">Your Name</div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/xPSOyM11lYM?rel=0&modestbranding=1"></iframe>
+    </div>
+  </div>
+
+  <div>
+    <div class="video-title" style="color:#ff4d4d;">Gaming Edit</div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1"></iframe>
+    </div>
+  </div>
+
+  <div>
+    <div class="video-title" style="color:#ffd93d;">Montage Edit</div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/znFoo2JC8LY?rel=0&modestbranding=1"></iframe>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<footer class="social-footer">
+<div class="social-icons">
+<a href="https://www.youtube.com/@jatinaep69" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+<a href="https://www.instagram.com/jatinaep" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+<a href="https://wa.me/919079198293" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+</div>
+
+<a href="contact.html" class="contact-btn">CONTACT ME</a>
+
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
