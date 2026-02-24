@@ -76,7 +76,6 @@ body::before{
 }
 .menu.active{ right:0; }
 
-/* ⭐ MENU COLORS ADDED */
 .menu a{
   display:block;
   text-decoration:none;
@@ -87,10 +86,10 @@ body::before{
   transition:.3s;
 }
 
-.menu a:nth-child(1){ color:#F5DEB3; } /* HOME */
-.menu a:nth-child(2){ color:#E56717; } /* GAMING */
-.menu a:nth-child(3){ color:#EFB261; } /* ABOUT */
-.menu a:nth-child(4){ color:#FF8040; } /* CONTACT */
+.menu a:nth-child(1){ color:#F5DEB3; }
+.menu a:nth-child(2){ color:#E56717; }
+.menu a:nth-child(3){ color:#EFB261; }
+.menu a:nth-child(4){ color:#FF8040; }
 
 .menu a:hover{
   transform:scale(1.1);
@@ -120,7 +119,6 @@ body::before{
 }
 .profile-pic:hover{ filter: grayscale(0%); }
 
-/* SUMMARY */
 .hero-summary{
   font-family:Poppins;
   font-size:20px;
@@ -130,7 +128,6 @@ body::before{
   margin-bottom:60px;
 }
 
-/* SWAPPED COLORS */
 .videoColor{ color:#FFA500; }
 .motionColor{ color:#E56717; }
 
@@ -161,7 +158,6 @@ body::before{
 }
 .BLUE{ color:#ffffff; }
 
-/* FOOTER */
 .social-footer{
   text-align:center;
   padding:60px 0;
@@ -201,9 +197,9 @@ body::before{
 
 <div class="hero-summary">
   I'm a <span class="videoColor">Video Editor</span> and <span class="motionColor">Motion Designer</span>.<br>
-I started editing just out of curiosity, but it quickly became something I genuinely enjoy doing.
-I love turning simple clips into cinematic edits and gaming montages, and I’m always experimenting with motion graphics to improve my skills.
-Currently open for freelance projects and collaborations.
+  I started editing just out of curiosity, but it quickly became something I genuinely enjoy doing.
+  I love turning simple clips into cinematic edits and gaming montages, and I’m always experimenting with motion graphics to improve my skills.
+  Currently open for freelance projects and collaborations.
 </div>
 
 <div class="videos">
@@ -217,9 +213,9 @@ Currently open for freelance projects and collaborations.
 
 <div>
 <div class="video-title" style="color:#00ff9c;">Your Name</div>
-<video controls width="100%" style="border-radius:12px;">
-<source src="Sequence 01 .mp4" type="video/mp4">
-</video>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/xPSOyM11lYM?rel=0&modestbranding=1"></iframe>
+</div>
 </div>
 
 <div>
@@ -261,6 +257,3 @@ document.getElementById("menu").classList.toggle("active");
 
 </body>
 </html>
-
-
-
