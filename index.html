@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JATINfx</title>
@@ -85,7 +84,6 @@ body::before{
   margin:25px 0;
   transition:.3s;
 }
-
 .menu a:nth-child(1){ color:#F5DEB3; }
 .menu a:nth-child(2){ color:#E56717; }
 .menu a:nth-child(3){ color:#EFB261; }
@@ -102,17 +100,17 @@ body::before{
   padding:150px 20px 120px;
 }
 
-/* HERO FIXED ALIGNMENT */
+/* ===== HERO PERFECT ALIGN ===== */
 .hero-top{
   position:relative;
-  height:200px;
-  margin-bottom:40px;
+  height:220px;
+  margin-bottom:20px;
 }
 
-/* PROFILE PIC */
+/* PROFILE */
 .profile-pic{
-  width:85px;
-  height:85px;
+  width:90px;
+  height:90px;
   border-radius:50%;
   object-fit:cover;
   position:absolute;
@@ -120,41 +118,41 @@ body::before{
   top:50%;
   transform:translateY(-50%);
   filter: grayscale(100%);
-  transition:0.4s;
+  transition:.4s;
 }
 .profile-pic:hover{
   filter: grayscale(0%);
 }
 
-/* HELLO IMAGE */
+/* HELLO */
 .hello-img{
-  width:200px;
+  width:220px;
   position:absolute;
   right:18%;
   top:50%;
   transform:translateY(-50%);
 }
 
-/* MOBILE */
+/* MOBILE FIX */
 @media(max-width:600px){
   .hero-top{
-    height:160px;
+    height:180px;
   }
   .profile-pic{
-    left:8%;
+    left:10%;
     width:70px;
     height:70px;
   }
   .hello-img{
-    right:8%;
-    width:140px;
+    right:10%;
+    width:160px;
   }
 }
 
 .hero-summary{
   font-family:Poppins;
   font-size:20px;
-  opacity:0.85;
+  opacity:0.9;
   line-height:1.7;
   max-width:900px;
   margin-bottom:60px;
@@ -182,7 +180,7 @@ body::before{
   border:none;
 }
 .video-title{
-  font-family:'Poppins';
+  font-family:Poppins;
   font-size:22px;
   letter-spacing:2px;
   text-align:center;
@@ -237,9 +235,36 @@ body::before{
 </div>
 
 <div class="videos">
-<!-- videos same as before -->
+
+<div>
+<div class="video-title BLUE">STEVE HARRINGTON</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
+</div>
 </div>
 
+<div>
+<div class="video-title" style="color:#00ff9c;">Your Name</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/xPSOyM11lYM?rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+<div>
+<div class="video-title" style="color:#ff4d4d;">Gaming Edit</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+<div>
+<div class="video-title" style="color:#ffd93d;">Montage Edit</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/znFoo2JC8LY?rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+</div>
 </div>
 
 <footer class="social-footer">
