@@ -102,18 +102,19 @@ body::before{
   padding:150px 20px 120px;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero-top{
   display:flex;
   align-items:center;
   gap:30px;
   flex-wrap:wrap;
   margin-bottom:40px;
+  justify-content:flex-start;
 }
 
-/* PROFILE PIC */
+/* PROFILE PIC (smaller) */
 .profile-pic{
-  width:120px;
+  width:95px;
   aspect-ratio:1/1;
   border-radius:50%;
   object-fit:cover;
@@ -122,25 +123,27 @@ body::before{
 }
 .profile-pic:hover{ filter: grayscale(0%); }
 
-/* HELLO IMAGE */
+/* HELLO IMAGE (bigger) */
 .hello-img{
-  width:140px;
-  max-width:40vw;
+  width:180px;
+  max-width:55vw;
   height:auto;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media(max-width:600px){
   .hero-top{
     justify-content:center;
     text-align:center;
   }
+  .profile-pic{
+    width:80px;
+  }
   .hello-img{
-    width:120px;
+    width:150px;
   }
 }
 
-/* SUMMARY */
 .hero-summary{
   font-family:Poppins;
   font-size:20px;
@@ -180,6 +183,7 @@ body::before{
 }
 .BLUE{ color:#ffffff; }
 
+/* FOOTER */
 .social-footer{
   text-align:center;
   padding:60px 0;
@@ -215,8 +219,6 @@ body::before{
 
 <div class="hero-top">
   <img src="https://raw.githubusercontent.com/jatinshakya555555-sudo/jatinfx/main/jatin.jpeg" class="profile-pic">
-  
-  <!-- ⭐ HELLO IMAGE ADDED -->
   <img src="hello.png" class="hello-img">
 </div>
 
@@ -227,7 +229,53 @@ body::before{
   Currently open for freelance projects and collaborations.
 </div>
 
+<div class="videos">
+
+<div>
+<div class="video-title BLUE">STEVE HARRINGTON</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/OWfS-pP80gw?rel=0&modestbranding=1"></iframe>
 </div>
+</div>
+
+<div>
+<div class="video-title" style="color:#00ff9c;">Your Name</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/xPSOyM11lYM?rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+<div>
+<div class="video-title" style="color:#ff4d4d;">Gaming Edit</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+<div>
+<div class="video-title" style="color:#ffd93d;">Montage Edit</div>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/znFoo2JC8LY?rel=0&modestbranding=1"></iframe>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<footer class="social-footer">
+<div class="social-icons">
+<a href="https://www.youtube.com/@jatinaep69" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+<a href="https://www.instagram.com/jatinaep" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+<a href="https://wa.me/919079198293" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+</div>
+</footer>
 
 <script>
 function toggleMenu(){
