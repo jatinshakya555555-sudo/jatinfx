@@ -12,31 +12,30 @@ body{
   background:#1B1212;
   color:white;
   text-align:center;
-  padding:80px 20px;
+  padding:80px 15px;
 }
 
 h1{
-  font-size:40px;
+  font-size:36px;
   margin-bottom:60px;
   letter-spacing:3px;
 }
 
-.reels-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
-  max-width:900px;
-  margin:auto;
+/* CENTER WRAPPER */
+.reels-container{
+  display:flex;
+  justify-content:center;
 }
 
+/* SHORTS RATIO */
 .video-wrapper{
   position:relative;
   width:100%;
-  padding-bottom:177.77%; /* 9:16 ratio for Shorts */
+  max-width:360px;   /* 👈 important */
+  aspect-ratio:9/16; /* 👈 modern clean method */
 }
 
 .video-wrapper iframe{
-  position:absolute;
   width:100%;
   height:100%;
   border-radius:20px;
@@ -49,7 +48,7 @@ h1{
 
 <h1>My Reels</h1>
 
-<div class="reels-grid">
+<div class="reels-container">
 
   <div class="video-wrapper">
     <iframe 
