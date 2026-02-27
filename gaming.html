@@ -81,63 +81,40 @@ body::before{
   font-size:20px;
   margin:25px 0;
 }
-.menu a:nth-child(1){ color:#FFA500; }
-.menu a:nth-child(2){ color:#E09121; }
-.menu a:nth-child(3){ color:#EFB261; }
-.menu a:nth-child(4){ color:#FF8040; }
 .menu.active{ right:0; }
 
-/* PAGE CONTENT */
+/* CONTENT */
 .container{
   max-width:1100px;
   margin:auto;
   padding:150px 20px 80px;
 }
 
-/* TITLE */
 .page-title{
   text-align:center;
   font-family:Poppins;
   letter-spacing:6px;
   font-size:38px;
-  color:#ffffff;
-  position:relative;
-  margin-top:40px;
+  margin-bottom:40px;
 }
 
-/* CONTROLLER ICON */
-.page-title::before{
-  content:"";
-  position:absolute;
-  top:-35px;
-  left:50%;
-  transform:translateX(-50%);
-  width:260px;
-  height:260px;
-  background:url("https://cdn-icons-png.flaticon.com/512/686/686589.png");
-  background-size:contain;
-  background-repeat:no-repeat;
-  opacity:0.55;
-  filter:brightness(0) saturate(100%) invert(58%) sepia(86%) saturate(567%) hue-rotate(350deg) brightness(98%) contrast(95%);
-  z-index:-1;
-}
-
-/* BEFORE AFTER SLIDER */
-.ba-slider{
+/* 🔥 WIPE SLIDER */
+.wipe-slider{
   position:relative;
   width:100%;
   max-width:900px;
   margin:60px auto;
   overflow:hidden;
   border-radius:20px;
+  cursor:ew-resize;
 }
 
-.ba-slider img{
+.wipe-slider img{
   width:100%;
   display:block;
 }
 
-.ba-overlay{
+.wipe-overlay{
   position:absolute;
   top:0;
   left:0;
@@ -146,36 +123,31 @@ body::before{
   overflow:hidden;
 }
 
-.ba-handle{
+.wipe-line{
   position:absolute;
   top:0;
   left:50%;
   width:4px;
   height:100%;
   background:#ffffff;
-  cursor:ew-resize;
-  z-index:5;
+  z-index:10;
 }
 
-.ba-handle::after{
-  content:"";
+.wipe-circle{
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  width:35px;
-  height:35px;
+  width:45px;
+  height:45px;
   background:#E56717;
   border-radius:50%;
-  box-shadow:0 0 15px #E56717;
+  box-shadow:0 0 20px rgba(229,103,23,0.8);
 }
 
 /* VIDEO */
 .videos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:45px;
-  margin-top:40px;
+  margin-top:60px;
 }
 .video-wrapper{
   position:relative;
@@ -199,7 +171,6 @@ body::before{
   color:white;
   text-decoration:none;
   border-bottom:1px solid white;
-  padding-bottom:5px;
 }
 </style>
 </head>
@@ -225,19 +196,21 @@ body::before{
 
 <h2 class="page-title">GAMING</h2>
 
-<!-- BEFORE AFTER SLIDER -->
-<div class="ba-slider" id="baSlider">
+<!-- 🔥 BEFORE AFTER WIPE -->
+<div class="wipe-slider" id="wipeSlider">
 
-  <!-- AFTER IMAGE -->
+  <!-- AFTER -->
   <img src="after.png">
 
-  <!-- BEFORE IMAGE -->
-  <div class="ba-overlay" id="baOverlay">
+  <!-- BEFORE -->
+  <div class="wipe-overlay" id="wipeOverlay">
     <img src="before.png">
   </div>
 
-  <!-- HANDLE -->
-  <div class="ba-handle" id="baHandle"></div>
+  <!-- LINE -->
+  <div class="wipe-line" id="wipeLine">
+    <div class="wipe-circle"></div>
+  </div>
 
 </div>
 
@@ -259,21 +232,33 @@ function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
 
-const slider = document.getElementById("baSlider");
-const overlay = document.getElementById("baOverlay");
-const handle = document.getElementById("baHandle");
+/* 🔥 DRAG WIPE SCRIPT */
+const slider = document.getElementById("wipeSlider");
+const overlay = document.getElementById("wipeOverlay");
+const line = document.getElementById("wipeLine");
 
-function moveSlider(x){
+let isDragging = false;
+
+function updatePosition(x){
   const rect = slider.getBoundingClientRect();
   let pos = x - rect.left;
   let percent = (pos / rect.width) * 100;
   percent = Math.max(0, Math.min(100, percent));
   overlay.style.width = percent + "%";
-  handle.style.left = percent + "%";
+  line.style.left = percent + "%";
 }
 
-slider.addEventListener("mousemove", e => moveSlider(e.clientX));
-slider.addEventListener("touchmove", e => moveSlider(e.touches[0].clientX));
+slider.addEventListener("mousedown", () => isDragging = true);
+window.addEventListener("mouseup", () => isDragging = false);
+window.addEventListener("mousemove", e => {
+  if(isDragging) updatePosition(e.clientX);
+});
+
+slider.addEventListener("touchstart", () => isDragging = true);
+window.addEventListener("touchend", () => isDragging = false);
+window.addEventListener("touchmove", e => {
+  if(isDragging) updatePosition(e.touches[0].clientX);
+});
 </script>
 
 </body>
