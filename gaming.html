@@ -98,12 +98,34 @@ body::before{
   margin-bottom:40px;
 }
 
+/* 🔥 BEFORE AFTER HEADING */
+.ba-heading{
+  text-align:center;
+  font-family:Poppins;
+  font-size:22px;
+  letter-spacing:4px;
+  margin-bottom:25px;
+}
+
+.ba-heading .before{
+  opacity:0.6;
+}
+
+.ba-heading .after{
+  color:#E56717;
+  font-weight:600;
+}
+
+.ba-heading span{
+  margin:0 10px;
+}
+
 /* 🔥 REAL WIPE SLIDER */
 .wipe-slider{
   position:relative;
   width:100%;
   max-width:900px;
-  margin:60px auto;
+  margin:20px auto 60px auto;
   border-radius:20px;
   overflow:hidden;
   cursor:ew-resize;
@@ -194,16 +216,19 @@ body::before{
 
 <h2 class="page-title">GAMING</h2>
 
+<!-- 🔥 BEFORE AFTER TITLE -->
+<div class="ba-heading">
+  <span class="before">BEFORE</span> |
+  <span class="after">AFTER</span>
+</div>
+
 <!-- 🔥 REAL WIPE -->
 <div class="wipe-slider" id="wipeSlider">
 
-  <!-- AFTER (Bottom Image) -->
   <img src="after.png">
 
-  <!-- BEFORE (Top Image - Wipe Controlled) -->
   <img src="before.png" class="top-img" id="topImage">
 
-  <!-- Slider Line -->
   <div class="wipe-line" id="wipeLine">
     <div class="wipe-circle"></div>
   </div>
@@ -228,7 +253,6 @@ function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
 }
 
-/* 🔥 REAL WIPE SCRIPT */
 const slider = document.getElementById("wipeSlider");
 const topImage = document.getElementById("topImage");
 const line = document.getElementById("wipeLine");
