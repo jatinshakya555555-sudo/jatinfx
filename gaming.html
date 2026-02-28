@@ -84,7 +84,6 @@ body::before{
   margin:25px 0;
   transition:.3s;
 }
-
 .menu a:nth-child(1){ color:#F5DEB3; }
 .menu a:nth-child(2){ color:#E56717; }
 .menu a:nth-child(3){ color:#EFB261; }
@@ -100,19 +99,18 @@ body::before{
   max-width:1100px;
   margin:auto;
   padding:150px 20px 80px;
+  text-align:center;
 }
 
 .page-title{
-  text-align:center;
   font-family:Poppins;
   letter-spacing:6px;
   font-size:38px;
   margin-bottom:40px;
 }
 
-/* BEFORE AFTER HEADING */
+/* BEFORE AFTER TITLE */
 .ba-heading{
-  text-align:center;
   font-family:Poppins;
   font-size:22px;
   letter-spacing:4px;
@@ -129,7 +127,7 @@ body::before{
   position:relative;
   width:100%;
   max-width:900px;
-  margin:20px auto 60px auto;
+  margin:20px auto 80px auto;
   border-radius:20px;
   overflow:hidden;
   cursor:ew-resize;
@@ -167,21 +165,22 @@ body::before{
 
 /* VIDEOS */
 .videos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:50px;
-  margin-top:60px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:70px;
 }
 
 .video-box{
-  text-align:center;
+  width:100%;
+  max-width:800px;
 }
 
 .video-title{
   font-family:Poppins;
   font-size:20px;
   letter-spacing:3px;
-  margin-bottom:15px;
+  margin-bottom:20px;
 }
 
 .video-wrapper{
@@ -198,8 +197,7 @@ body::before{
 
 /* BACK */
 .back{
-  text-align:center;
-  margin:70px 0;
+  margin:80px 0;
   font-family:Poppins;
 }
 .back a{
@@ -244,10 +242,8 @@ body::before{
   </div>
 </div>
 
-<!-- 🔥 VIDEOS -->
 <div class="videos">
 
-  <!-- NEW VIDEO (NOW FIRST) -->
   <div class="video-box">
     <div class="video-title" style="color:#E56717;">
       NOT BIGSHOT EDIT
@@ -257,7 +253,6 @@ body::before{
     </div>
   </div>
 
-  <!-- OLD VIDEO -->
   <div class="video-box">
     <div class="video-title" style="color:#F5DEB3;">
       GAMING MONTAGE
