@@ -85,7 +85,6 @@ body::before{
   transition:.3s;
 }
 
-/* 🔥 ORIGINAL DIFFERENT COLORS BACK */
 .menu a:nth-child(1){ color:#F5DEB3; }
 .menu a:nth-child(2){ color:#E56717; }
 .menu a:nth-child(3){ color:#EFB261; }
@@ -125,7 +124,7 @@ body::before{
   font-weight:600;
 }
 
-/* REAL WIPE SLIDER */
+/* WIPE SLIDER */
 .wipe-slider{
   position:relative;
   width:100%;
@@ -135,19 +134,16 @@ body::before{
   overflow:hidden;
   cursor:ew-resize;
 }
-
 .wipe-slider img{
   width:100%;
   display:block;
 }
-
 .top-img{
   position:absolute;
   top:0;
   left:0;
   clip-path:inset(0 50% 0 0);
 }
-
 .wipe-line{
   position:absolute;
   top:0;
@@ -157,7 +153,6 @@ body::before{
   background:#fff;
   z-index:5;
 }
-
 .wipe-circle{
   position:absolute;
   top:50%;
@@ -170,13 +165,25 @@ body::before{
   box-shadow:0 0 20px rgba(229,103,23,0.8);
 }
 
-/* VIDEOS GRID */
+/* VIDEOS */
 .videos{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:40px;
+  gap:50px;
   margin-top:60px;
 }
+
+.video-box{
+  text-align:center;
+}
+
+.video-title{
+  font-family:Poppins;
+  font-size:20px;
+  letter-spacing:3px;
+  margin-bottom:15px;
+}
+
 .video-wrapper{
   position:relative;
   padding-bottom:56.25%;
@@ -237,17 +244,27 @@ body::before{
   </div>
 </div>
 
-<!-- 🔥 VIDEOS SECTION (NOW 2 VIDEOS) -->
+<!-- 🔥 VIDEOS -->
 <div class="videos">
 
-  <!-- OLD VIDEO -->
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1" allowfullscreen></iframe>
+  <!-- NEW VIDEO (NOW FIRST) -->
+  <div class="video-box">
+    <div class="video-title" style="color:#E56717;">
+      NOT BIGSHOT EDIT
+    </div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/H-6bPxQqzNw?rel=0&modestbranding=1" allowfullscreen></iframe>
+    </div>
   </div>
 
-  <!-- NEW VIDEO ADDED -->
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/H-6bPxQqzNw?rel=0&modestbranding=1" allowfullscreen></iframe>
+  <!-- OLD VIDEO -->
+  <div class="video-box">
+    <div class="video-title" style="color:#F5DEB3;">
+      GAMING MONTAGE
+    </div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1" allowfullscreen></iframe>
+    </div>
   </div>
 
 </div>
