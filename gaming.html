@@ -73,6 +73,8 @@ body::before{
   text-align:center;
   z-index:9999;
 }
+.menu.active{ right:0; }
+
 .menu a{
   display:block;
   text-decoration:none;
@@ -80,8 +82,19 @@ body::before{
   letter-spacing:3px;
   font-size:20px;
   margin:25px 0;
+  transition:.3s;
 }
-.menu.active{ right:0; }
+
+/* 🔥 ORIGINAL DIFFERENT COLORS BACK */
+.menu a:nth-child(1){ color:#F5DEB3; }
+.menu a:nth-child(2){ color:#E56717; }
+.menu a:nth-child(3){ color:#EFB261; }
+.menu a:nth-child(4){ color:#FF8040; }
+
+.menu a:hover{
+  transform:scale(1.1);
+  text-shadow:0 0 10px currentColor;
+}
 
 /* CONTENT */
 .container{
@@ -98,7 +111,7 @@ body::before{
   margin-bottom:40px;
 }
 
-/* 🔥 BEFORE AFTER HEADING */
+/* BEFORE AFTER HEADING */
 .ba-heading{
   text-align:center;
   font-family:Poppins;
@@ -106,21 +119,13 @@ body::before{
   letter-spacing:4px;
   margin-bottom:25px;
 }
-
-.ba-heading .before{
-  opacity:0.6;
-}
-
+.ba-heading .before{ opacity:0.6; }
 .ba-heading .after{
   color:#E56717;
   font-weight:600;
 }
 
-.ba-heading span{
-  margin:0 10px;
-}
-
-/* 🔥 REAL WIPE SLIDER */
+/* REAL WIPE SLIDER */
 .wipe-slider{
   position:relative;
   width:100%;
@@ -165,8 +170,11 @@ body::before{
   box-shadow:0 0 20px rgba(229,103,23,0.8);
 }
 
-/* VIDEO */
+/* VIDEOS GRID */
 .videos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
   margin-top:60px;
 }
 .video-wrapper{
@@ -216,30 +224,32 @@ body::before{
 
 <h2 class="page-title">GAMING</h2>
 
-<!-- 🔥 BEFORE AFTER TITLE -->
 <div class="ba-heading">
   <span class="before">BEFORE</span> |
   <span class="after">AFTER</span>
 </div>
 
-<!-- 🔥 REAL WIPE -->
 <div class="wipe-slider" id="wipeSlider">
-
   <img src="after.png">
-
   <img src="before.png" class="top-img" id="topImage">
-
   <div class="wipe-line" id="wipeLine">
     <div class="wipe-circle"></div>
   </div>
-
 </div>
 
-<!-- VIDEO -->
+<!-- 🔥 VIDEOS SECTION (NOW 2 VIDEOS) -->
 <div class="videos">
+
+  <!-- OLD VIDEO -->
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/vma9CWf7g54?rel=0&modestbranding=1" allowfullscreen></iframe>
   </div>
+
+  <!-- NEW VIDEO ADDED -->
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/H-6bPxQqzNw?rel=0&modestbranding=1" allowfullscreen></iframe>
+  </div>
+
 </div>
 
 <div class="back">
@@ -264,7 +274,6 @@ function updateSlider(x){
   let pos = x - rect.left;
   let percent = (pos / rect.width) * 100;
   percent = Math.max(0, Math.min(100, percent));
-
   topImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
   line.style.left = percent + "%";
 }
