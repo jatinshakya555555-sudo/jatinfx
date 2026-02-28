@@ -42,16 +42,56 @@ body::before{
   left:25px;
   font-family:Poppins;
   font-size:26px;
+  z-index:10001;
 }
 .logo a{ text-decoration:none; color:white; }
 .logo span{ color:#E56717; }
 
-/* MAIN CONTAINER */
+/* MENU ICON */
+.menu-icon{
+  position:fixed;
+  top:18px;
+  right:25px;
+  font-size:30px;
+  cursor:pointer;
+  color:#E56717;
+  z-index:10001;
+}
+
+/* SIDE MENU */
+.menu{
+  position:fixed;
+  top:0;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  transition:.4s;
+  padding-top:120px;
+  text-align:center;
+  z-index:9999;
+}
+.menu.active{ right:0; }
+
+.menu a{
+  display:block;
+  font-family:Poppins;
+  letter-spacing:3px;
+  font-size:20px;
+  margin:25px 0;
+  text-decoration:none;
+}
+.menu a:nth-child(1){ color:#F5DEB3; }
+.menu a:nth-child(2){ color:#E56717; }
+.menu a:nth-child(3){ color:#EFB261; }
+.menu a:nth-child(4){ color:#FF8040; }
+
+/* CONTENT */
 .container{
   width:100%;
   max-width:900px;
   margin:0 auto;
-  padding:140px 20px 80px;
+  padding:140px 20px 60px;
   text-align:center;
 }
 
@@ -64,7 +104,6 @@ body::before{
 
 /* TOGGLE BUTTONS */
 .toggle-buttons{
-  text-align:center;
   margin-bottom:60px;
 }
 
@@ -93,7 +132,7 @@ body::before{
   display:block;
 }
 
-/* VIDEO SECTION */
+/* VIDEO */
 .video-section{
   margin-bottom:80px;
 }
@@ -109,8 +148,7 @@ body::before{
   width:100%;
   max-width:750px;
   padding-bottom:56.25%;
-  margin-left:auto;
-  margin-right:auto;
+  margin:0 auto;
 }
 
 .video-wrapper iframe{
@@ -165,6 +203,20 @@ body::before{
   background:#E56717;
   border-radius:50%;
 }
+
+/* BACK BUTTON */
+.back{
+  text-align:center;
+  margin:80px 0 40px;
+  font-family:Poppins;
+}
+
+.back a{
+  color:white;
+  text-decoration:none;
+  border-bottom:1px solid white;
+  padding-bottom:5px;
+}
 </style>
 </head>
 
@@ -173,7 +225,16 @@ body::before{
 <div class="topbar"></div>
 
 <div class="logo">
-  <a href="./">Jatin<span>Fx</span></a>
+  <a href="./index.html">Jatin<span>Fx</span></a>
+</div>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
+  <a href="./index.html">HOME</a>
+  <a href="./gaming.html">GAMING</a>
+  <a href="./about.html">ABOUT</a>
+  <a href="./contact.html">CONTACT</a>
 </div>
 
 <div class="container">
@@ -217,9 +278,17 @@ body::before{
 
 </div>
 
+<div class="back">
+  <a href="index.html">← BACK TO HOME</a>
+</div>
+
 </div>
 
 <script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
 function showSection(section){
   document.getElementById("videos").classList.remove("active");
   document.getElementById("thumb").classList.remove("active");
